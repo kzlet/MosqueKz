@@ -1,0 +1,104 @@
+  <ion-content  class="header">
+
+    <div align="center">
+      <img src="imgs/mosque_user.jpg"/>
+    </div>
+
+    <div align="center" style="margin-top: -151px;">
+      <h2>{{m_name}}</h2>   <!--m_name-->
+    </div>
+
+    <!--div align="center" style="margin-top: 130px;">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <img src="imgs/announcement.png" style="width: 80%;" (click)="announcement()"/>
+        </ion-col>
+        <ion-col col-6>
+          <img src="imgs/prayers.png" style="width: 80%;" (click)="prayers()"/>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <img src="imgs/morgue.png" style="width: 80%;" (click)="morgue()"/>
+        </ion-col>
+        <ion-col col-6>
+          <img src="imgs/settings_icon.png" style="width: 80%;" (click)="message()"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <img src="imgs/morgue.png" style="width: 80%;" (click)="posts()"/>
+        </ion-col>
+        <ion-col col-6>
+          <img src="imgs/settings_icon.png" style="width: 80%;" (click)="settings_icon()"/>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div-->
+
+<div style="margin-top: 130px;">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+         
+              <img style="width:44%;margin-left: 28%; margin-top: 22px;" src="imgs/events_outline.png" (click)="announcement()">
+              <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px; 
+              font-size: 2.0rem;">Post Events</p>
+           
+      </ion-col>
+
+      <ion-col>
+         
+        <img style="width:50%;margin-left: 24%; margin-top: 7px;" src="imgs/prayer2_outline.png" (click)="prayers()">
+        <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px; 
+        font-size: 2.1rem;">Prayers</p>
+     
+</ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+     <ion-grid>
+    <ion-row>
+      <ion-col>
+       
+              <img style="width:50%;margin-left: 24%; margin-top: 7px;" src="imgs/janaza_outline.png" (click)="morgue()">
+              <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px;
+              font-size: 2.0rem;">Janazah</p>
+        
+      </ion-col>
+      <ion-col>
+     
+            <img style="width:50%;margin-left: 24%; margin-top: 7px;" src="imgs/msg_outline.png" (click)="msg()">
+            <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px;
+            font-size: 2.0rem;">My Messages</p>
+          
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+       
+              <img style="width:50%;margin-left: 24%; margin-top: 7px;" src="imgs/postings_outline.png" (click)="posts()">
+              <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px;
+              font-size: 2.0rem;">My Postings</p>
+        
+      </ion-col>
+      <ion-col>
+     
+            <img style="width:50%;margin-left: 24%; margin-top: 7px;" src="imgs/settings_outline.png" (click)="settings_icon()">
+            <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px;
+            font-size: 2.0rem;">Settings</p>
+          
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+</ion-content>
+

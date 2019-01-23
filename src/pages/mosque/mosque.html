@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="margin-left: 50px;">My Mosques</ion-title>
+    <ion-buttons end>
+      <!-- End will pusg it to right / left will move it to left -->
+      <button ion-button id="button" style="background:transparent;color:#D4AF37" (click)="presentProfileModal()" >
+       <ion-icon style="font-size: 30px;" name="ios-add-circle-outline"></ion-icon>
+         </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="header">
+  <ion-list style="background-color:transparent" *ngFor="let post of posts">
+    <ion-item style="background-color:transparent" (click)="sendto(post.mosque_name, post.player_id, post.mosque_email)">
+      <ion-avatar item-start>
+        <img src="imgs/mosque.png">
+      </ion-avatar>
+      <h2>{{post.mosque_name}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+<!-- <ion-list style="background-color:transparent" *ngFor="let post of bookings">
+  <ion-item style="background-color:transparent" (click)="sendto(post.mosque_name, post.mosque_image, post.uuid, post.mosque_email)">
+    <ion-avatar item-start>
+      <img src="imgs/mosque.png">
+    </ion-avatar>
+    <h2>{{post.mosque_name}}</h2>
+  </ion-item>
+</ion-list> -->

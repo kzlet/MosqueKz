@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="    margin-left: 79px;">
+      Janazah
+
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="header">
+  <ion-card>
+
+
+
+    <ion-card-content>
+      <div align="center">
+          <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:25px">
+              <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                <ion-input type="text" placeholder="Enter Name of Person" [(ngModel)]="person"></ion-input>
+              </ion-item>
+            </div>
+        
+            <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                  <ion-input type="text" placeholder="Enter Description" [(ngModel)]="description"></ion-input>
+                </ion-item>
+              </div>
+
+              <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+              <ion-item>
+                  <ion-datetime displayFormat="MMM DD YYYY" placeholder="Enter Date" [(ngModel)]="date"></ion-datetime>
+                </ion-item>
+              </div>
+                
+              <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                  <ion-item>
+                      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" placeholder="Enter Time" [(ngModel)]="time"></ion-datetime>
+                    </ion-item>
+                </div>
+            
+                <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                    <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                      <ion-input type="text" placeholder="Enter Location" [(ngModel)]="location"></ion-input>
+                    </ion-item>
+                  </div>
+        
+              <div style="padding-top:8px">
+                <button ion-button full color="light" round outline (click)="signup()" class="login" style="width: 94%">Send</button>
+              </div>
+      </div>
+    </ion-card-content>
+
+
+
+  </ion-card>
+</ion-content>

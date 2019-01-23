@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title><p>{{mosque_name}}</p></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<div align="center">
+  <ion-card style="border-radius:12px 12px; background-color:#c68d2c">
+    <h1 style="color:black;padding-top:12px">{{d}}</h1>
+      <h3 style="color:black;padding-bottom:12px">Prayer Times</h3>
+  </ion-card>
+</div>
+
+<div  style="margin-top:25px;padding:10px" *ngFor="let post of posts">
+ <p><b style="color:black">FAJR</b></p>  <p style="float:right;margin-top: -29px;color:#c68d2c">{{post.fajr}}</p>
+ <p><b style="color:black">ZUHR</b></p>  <p style="float:right;margin-top: -29px;color:#c68d2c">{{post.zohar}}</p>
+ <p><b style="color:black">ASR</b></p>  <p style="float:right;margin-top: -29px;color:#c68d2c">{{post.asr}}</p>
+ <p><b style="color:black">MAGHRIB</b></p>  <p style="float:right;margin-top: -29px;color:#c68d2c">{{post.maghrib}}</p>
+ <p><b style="color:black">ISHA</b></p>  <p style="float:right;margin-top: -29px;color:#c68d2c">{{post.isha}}</p>
+ <p><b style="color:black">JUMU'AH</b></p>  <p style="float:right;margin-top: -29px;color:#c68d2c">{{post.jummah}}</p>
+</div>
+
+
+
+<div align="center" *ngFor="let toast of coasts">
+  <details style="background-color:#c68d2c; padding-top:15px;padding-bottom:15px; border-radius:12px 12px;width: 94%;">
+      <summary style="color:black">Mosque Information</summary>
+      <div align="center"><img src="{{toast.mosque_image}}"/>
+      <p style="text-align:left"><b style="padding-left:5px; padding-bottom:15px">Address:</b></p><p style="color:black">{{toast.address}}</p>
+      <p style="text-align:left"><b style="padding-left:5px; padding-bottom:15px">Postal Code:</b></p>  <p style="color:black">{{toast.code}}</p>
+      </div>
+    </details>
+  </div>
+
+<div align="center">
+<button ion-button full color="danger" (click)="stop()">Stop Notifications</button>
+</div>
+
+</ion-content>

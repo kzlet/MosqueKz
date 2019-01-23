@@ -1,0 +1,28 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title style="margin-left: 50px;">Janazah</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content padding class="header">
+
+  <ion-card *ngFor="let toast of toasts">
+    <ion-item nowrap>
+        <ion-avatar item-start>
+            <img src="imgs/death.JPG">
+          </ion-avatar>
+      <h2>{{toast.person}}</h2>
+      <h4>on {{toast.date}}</h4>
+      <p>at around {{toast.time}}</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>{{toast.description}}</p>
+      <p><b>Salat al-Janazah:</b> &nbsp; Salat will be offered at {{toast.location}}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

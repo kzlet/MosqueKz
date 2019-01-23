@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Messages from Admin</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="header">
+
+  <ion-card *ngFor="let post of posts" style="margin-top: 5%; border-radius: 12px 12px">
+    <details style="margin-top: 26px;">
+      <summary>
+
+        <ion-item style="margin-top: -36px;margin-left: -8px;" nowrap>
+          <ion-icon name="ios-alert-outline" item-start></ion-icon>
+          {{post.topic}}
+          <p item-end>{{post.date}}</p>
+        </ion-item>
+      </summary>
+
+      <p style="margin: 5% 5% 5% 5%;">{{post.message}}</p>
+      <p (click)="event(post.link)" style="margin: 5% 5% 5% 5%; color:blue">{{post.link}}</p>
+    </details>
+  </ion-card>
+
+ 
+
+</ion-content>

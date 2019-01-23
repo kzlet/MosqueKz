@@ -1,0 +1,139 @@
+
+ <ion-header>
+  
+  
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="User">
+        <ion-segment-button value="login" style="font-size: 15px ;color: FFA500">
+          Log-In
+        </ion-segment-button>
+        <ion-segment-button value="signup" style="font-size: 15px ;color: FFA500">
+          Sign-Up
+        </ion-segment-button>
+      
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+
+  
+  <ion-content class="header">
+    
+    <div [ngSwitch]="User">
+      <ion-card style="border-radius:12px 12px" *ngSwitchCase="'login'">
+         
+              <ion-card-content>
+                <div align="center">
+                  <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                    <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                      <ion-input type="text" placeholder="Email Address" [(ngModel)]="email"></ion-input>
+                    </ion-item>
+                  </div>
+
+                  <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                    <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                      <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                    </ion-item>
+                  </div>
+
+                  <div align="right">
+                    <h5 style="color:goldenrod"  (click)="forget()">Forget Password ?</h5>
+                   </div>
+
+                  <div align="center" style="padding-top:8px">
+                    <button ion-button full color="light" round outline (click)="signIn()" class="login" style="width: 94%;font-size:1.45em">Login</button>
+                  </div>
+
+             </div>
+             </ion-card-content>
+           
+            </ion-card>
+
+
+            <ion-card style="border-radius:12px 12px" *ngSwitchCase="'signup'">
+         
+             <div align="center" style="padding-top:10px" (click)="presentActionSheet()">
+                <img *ngIf="imageURI === undefined || imageURI === 'undefined'" src="imgs/profile.png" style="width: 27%;"/>
+                <img *ngIf="imageURI != undefined || imageURI != 'undefined'" src="{{imageURI}}" style="width: 27%;"/>
+            </div>
+        
+        
+            <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                  <ion-input type="text" placeholder="Name of Mosque" [(ngModel)]="mosque_name"></ion-input>
+                </ion-item>
+              </div>
+        
+              <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                  <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                    <ion-input type="text" placeholder="Full Address" [(ngModel)]="address"></ion-input>
+                  </ion-item>
+                </div>
+        
+                <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                    <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                      <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                    </ion-item>
+                  </div>
+
+                  <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                      <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                        <ion-input type="password" placeholder="confirm Password" [(ngModel)]="conpassword"></ion-input>
+                      </ion-item>
+                    </div>
+
+                <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                    <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                      <ion-input type="text" placeholder="Postcode" [(ngModel)]="code"></ion-input>
+                    </ion-item>
+                  </div>
+        
+
+                  <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                    <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                      <ion-input type="number" placeholder="Mobile" [(ngModel)]="mobile"></ion-input>
+                    </ion-item>
+                  </div>
+        
+                    <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                        <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                          <ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
+                        </ion-item>
+                      </div>
+
+                      <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                        <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                          <ion-input type="text" placeholder="Your Name" [(ngModel)]="user_name"></ion-input>
+                        </ion-item>
+                      </div>
+
+                      <!-- <ion-item style="background-color:transparent" no-lines>
+                          <ion-label style="font-size:14px" class="line-break">I agree to the
+                              <a (click)="openModal();">Privacy Policy</a> &
+                              <a (click)="openModal2();">Terms</a>
+                          </ion-label>
+                          <ion-checkbox [(ngModel)]="check2" checked="false" style="color:#c68d2c"></ion-checkbox>
+                      </ion-item> -->
+                      <div align="center" style="margin-top: 16px;">
+                        <p>By using this application you agree to our</p>
+                        <p><b style="color:#0077c8" (click)="openModal1();">Terms of Use</b>&nbsp;and&nbsp;<b style="color:#0077c8" (click)="openModal2();">Privacy Policy</b></p>
+                      </div>
+
+
+                      <div align="center" style="padding-top:5px">
+                        <button ion-button full color="light" class="login" round outline (click)="signup()" style="width: 94%;font-size:1.15em">Create Account</button>  <!--signup-->
+                      </div>
+
+      
+
+         
+           
+            </ion-card>
+  
+    </div>
+  </ion-content>
+
+  <ion-footer style="background-color:#c68d2c;">
+    <!--button ion-button full style="background-color:#c68d2c; color:white" (click)="next()">Switch to Community Member</button-->
+   
+   <div align="center"><p style="color:white" (click)="next()"><b>Switch to Community Member</b></p></div>
+  </ion-footer>

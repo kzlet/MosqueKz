@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="margin-left: 50px;">Events</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="header">
+
+ 
+      <ion-card *ngFor="let post of posts">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="{{post.event_picture}}">
+          </ion-avatar>
+          <h2>{{post.mosque_name}}</h2>
+          <p>{{post.event_date}}</p>
+        </ion-item>
+
+        <ion-card-content>
+          <p>{{post.event_description}}</p>
+        </ion-card-content>
+      </ion-card>
+ 
+
+</ion-content>

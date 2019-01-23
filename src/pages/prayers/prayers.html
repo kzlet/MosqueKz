@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+  <ion-title style="margin-left: 59px;">
+   Prayer Timings  
+  </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content class="header">
+  <ion-card style="margin-top:25px">
+         
+    <ion-card-content>
+      <div align="center">
+          
+          <ion-item>
+              <ion-label><p style="color:#c68d2c">Fajr</p></ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="fajr"></ion-datetime>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label><p style="color:#c68d2c">Dohar</p></ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="zohar"></ion-datetime>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label><p style="color:#c68d2c">Asr</p></ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="asr"></ion-datetime>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label><p style="color:#c68d2c">Maghrib</p></ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="maghrib"></ion-datetime>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label><p style="color:#c68d2c">Isha</p></ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="isha"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+              <ion-label><p style="color:#c68d2c">&nbsp;&nbsp;&nbsp;Offer Friday Prayers</p></ion-label>
+              <ion-toggle [(ngModel)]="checker" checked="false"></ion-toggle>
+            </ion-item>
+              
+              <ion-item>
+                <ion-label><p style="color:#c68d2c">Jum'ah</p></ion-label>
+                <ion-datetime [(disabled)]="!checker" displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="jummah"></ion-datetime>
+              </ion-item>
+
+            <button ion-button full class="login" style="margin-top: 45px" (click)="signup()">Update</button>
+   </div>
+   </ion-card-content>
+ 
+  </ion-card>
+</ion-content>

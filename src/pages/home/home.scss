@@ -1,0 +1,43 @@
+.id
+{
+    height:50px;
+    font-size: 19px;
+   background-color: #c68d2c;
+   color: white;
+
+}
+// .header{
+//     background-image: url('imgs/mosque.jpg');
+//     width: 100%;
+//     background-size: 100% 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: cover;
+// }
+
+.header{
+    background-image: url('../assets/imgs/mosque.jpg');
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.formasjid{
+    background-image: url('../assets/imgs/masjid_bg.png');
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.datetime-md {
+    padding: 13px 8px 13px 8px;
+}
+
+.label-md {
+    margin: 13px 8px 17px 13px;
+}
+

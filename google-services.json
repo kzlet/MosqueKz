@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "615540045142",
+    "firebase_url": "https://halal-house.firebaseio.com",
+    "project_id": "halal-house",
+    "storage_bucket": "halal-house.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615540045142:android:3da044e62602016f",
+        "android_client_info": {
+          "package_name": "io.ionic.masjid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615540045142-pin1ojkasbimcvsfh4rm7p2bljl84ib9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBAoZlLxVg7jSezlfMqaOjjr3_bm5r7d4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="margin-left: 50px">My Postings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-bounce padding class="header">
+
+    <ion-segment [(ngModel)]="pet">
+        <ion-segment-button value="kittens">
+          Events
+        </ion-segment-button>
+        <ion-segment-button value="puppies">
+          Janazah
+        </ion-segment-button>
+      </ion-segment>
+   
+    
+    <div [ngSwitch]="pet">
+      <ion-list *ngSwitchCase="'kittens'">
+          <ion-card *ngFor="let post of posts">
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="{{post.event_picture}}">
+                </ion-avatar>
+                <h2>{{post.mosque_name}}</h2>
+                <h4>{{post.event_title}}</h4>
+                <p>{{post.event_date}}</p>
+              </ion-item>
+            
+              <ion-card-content>
+                <p>{{post.event_description}}</p>
+                <p style="color:green" *ngIf="post.is_active === 1 || post.is_active === '1'">Active Post</p>
+                <p style="color:blue" *ngIf="post.is_active === 2 || post.is_active === '2'">Pending Post</p>
+                <p style="color:red" *ngIf="post.is_active === 3 || post.is_active === '3'">Post Deleted by Admin</p>
+              </ion-card-content>
+            </ion-card>
+      </ion-list>
+    
+      <ion-list *ngSwitchCase="'puppies'">
+          <ion-card *ngFor="let toast of toasts">
+              <ion-item>
+                <h2>{{toast.person}}</h2>
+                <h4>{{toast.date}}</h4>
+                <p>{{toast.time}}</p>
+              </ion-item>
+            
+              <ion-card-content>
+                <p>{{toast.description}}</p>
+                <p>{{toast.location}}</p>
+                <p style="color:green" *ngIf="toast.is_active === 1 || toast.is_active === '1'">Active Post</p>
+                <p style="color:blue" *ngIf="toast.is_active === 2 || toast.is_active === '2'">Pending Post</p>
+                <p  style="color:red" *ngIf="toast.is_active === 3 || toast.is_active === '3'">Post Deleted by Admin</p>
+              </ion-card-content>
+            </ion-card>
+      </ion-list>
+    </div>
+
+</ion-content>

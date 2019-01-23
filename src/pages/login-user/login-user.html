@@ -1,0 +1,185 @@
+
+ <ion-header>
+  
+  
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="user">
+      <ion-segment-button value="login" style="font-size: 15px ;color: FFA500">
+        Log-In
+      </ion-segment-button>
+      <ion-segment-button value="signup" style="font-size: 15px ;color: FFA500">
+        Sign-Up
+      </ion-segment-button>
+    
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding no-bounce class="header">
+  
+  <div [ngSwitch]="user">
+   
+    <ion-card style="border-radius:12px 12px" *ngSwitchCase="'login'">
+       
+         
+             
+              
+        <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+            <ion-item class="item-ios" style="border-radius: 12px 12px;">
+              <ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
+            </ion-item>
+          </div>
+    
+          <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+              <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+              </ion-item>
+            </div>
+
+            <div align="right">
+                <h5 style="color:#c68d2c;padding-right:5px" (click)="forget()">Forget Password ?</h5>
+               </div>
+
+
+               <div align="center" style="padding-top:8px">
+                  <button ion-button full color="light" round outline (click)="signIn()" class="login" style="width: 94%;font-size:0.85em">Login</button>
+                </div>
+
+         
+          </ion-card>
+
+     
+          <ion-card style="border-radius:12px 12px" *ngSwitchCase="'signup'">
+       
+              <div align="center" (click)="presentActionSheet()">
+                  <img *ngIf="imageURI === undefined || imageURI === 'undefined'" src="imgs/profile.png" style="width: 27%;"/>
+                  <img *ngIf="imageURI != undefined || imageURI != 'undefined'" src="{{imageURI}}" style="width: 27%;"/>
+                  <!--p style="color:#c68d2c;margin-top: 3%;">Upload your picture</p-->
+                </div>
+            
+            
+                <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                    <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                      <ion-input type="text" placeholder="Name" [(ngModel)]="name"></ion-input>
+                    </ion-item>
+                  </div>
+            
+                  <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                      <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                        <ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
+                      </ion-item>
+                    </div>
+            
+                    <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                        <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                          <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                        </ion-item>
+                      </div>
+
+                      <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                          <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                            <ion-input type="password" placeholder="Confirm Password" [(ngModel)]="conpassword"></ion-input>
+                          </ion-item>
+                        </div>
+
+                        <ion-item>
+                          <ion-label>Date of Birth</ion-label>
+                          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="dob"></ion-datetime>
+                        </ion-item>
+
+                        <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                            <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                              <ion-input type="text" placeholder="Postcode" [(ngModel)]="post_code"></ion-input>
+                            </ion-item>
+                          </div>
+
+                          <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                          <ion-item>
+                            <ion-label>Select City</ion-label>
+                            <ion-select [(ngModel)]="city">
+                              <ion-option value="London">London </ion-option>
+                              <ion-option value="Birmingham">Birmingham </ion-option>
+                              <ion-option value="Manchester">Manchester </ion-option>
+                              <ion-option value="Glasgow">Glasgow</ion-option>
+                              <ion-option value="Newcastle">Newcastle</ion-option>
+                              <ion-option value="Sheffield">Sheffield </ion-option>
+                              <ion-option value="Liverpool">Liverpool</ion-option>
+                              <ion-option value="Leeds">Leeds</ion-option>
+                              <ion-option value="Bristol">Bristol</ion-option>
+                              <ion-option value="Belfast">Belfast</ion-option>
+                              <ion-option value="Nottingham">Nottingham</ion-option>
+                              <ion-option value="York">York</ion-option>
+                              <ion-option value="Cambridge">Cambridge</ion-option>
+                              <ion-option value="Southampton">Southampton</ion-option>
+                              <ion-option value="Portsmouth">Portsmouth</ion-option>
+                              <ion-option value="Leicester">Leicester</ion-option>
+                              <ion-option value="Edinburgh">Edinburgh</ion-option>
+                              <ion-option value="Coventry">Coventry</ion-option>
+                              <ion-option value="Cardiff">Cardiff</ion-option>
+                              <ion-option value="Kingston">Kingston</ion-option>
+                              <ion-option value="Derby">Derby</ion-option>
+                              <ion-option value="Bath">Bath</ion-option>
+                              <ion-option value="Brighton">Brighton</ion-option>
+                              <ion-option value="Norwich">Norwich</ion-option>
+                              <ion-option value="Exeter">Exeter</ion-option>
+                              <ion-option value="Wolverhampton">Wolverhampton</ion-option>
+                              <ion-option value="Plymouth">Plymouth</ion-option>
+                              <ion-option value="Oxford">Oxford</ion-option>
+                              <ion-option value="Belfast">Belfast</ion-option>
+                              <ion-option value="Stoke-on-Trent">Stoke-on-Trent</ion-option>
+                              <ion-option value="Chestor">Chestor</ion-option>
+                              <ion-option value="Peterborough">Peterborough</ion-option>
+                              <ion-option value="Salisbury">Salisbury</ion-option>
+                              <ion-option value="Winchester">Winchester</ion-option>
+                              <ion-option value="Albands">St Albands</ion-option>
+                              <ion-option value="Preston">Preston</ion-option>
+                              <ion-option value="Chichester">Chichester</ion-option>
+                              <ion-option value="Swansea">Swansea</ion-option>
+                              <ion-option value="Canterbury">Canterbury</ion-option>
+                              <ion-option value="Bournemouth">Bournemouth</ion-option>
+                              <ion-option value="Sunderland">Sunderland</ion-option>
+                              <ion-option value="Worcester">Worcester</ion-option>
+                              <ion-option value="Lichfield">Lichfield</ion-option>
+                              <ion-option value="Lincoln">Lincoln</ion-option>
+                              <ion-option value="Carlisle">Carlisle</ion-option>
+                              <ion-option value="Dundee">Dundee</ion-option>
+                              <ion-option value="Middlesbrough">Middlesbrough</ion-option>
+                              <ion-option value="Newport">Newport</ion-option>
+                              <ion-option value="Durham">Durham</ion-option>
+                              <ion-option value="Bradford">Bradford</ion-option>
+                            
+                            </ion-select>
+                          </ion-item>
+                          </div>
+
+                          <!-- <ion-item style="background-color:transparent" no-lines>
+                              <ion-label style="padding-right: 12px" class="line-break">I agree to the
+                                  <a (click)="openModal();">Privacy Policy</a> &
+                                  <a (click)="openModal2();">Terms</a>
+                              </ion-label>
+                              <ion-checkbox [(ngModel)]="check2" checked="false" style="color:#c68d2c"></ion-checkbox>
+                          </ion-item> -->
+
+                          <div align="center" style="margin-top: 16px;">
+                            <p>By using this application you agree to our</p>
+                            <p><b style="color:#0077c8" (click)="openModal1();">Terms of Use</b>&nbsp;and&nbsp;<b style="color:#0077c8" (click)="openModal2();">Privacy Policy</b></p>
+                          </div>
+    
+    
+                          <div align="center" style="padding-top:5px">
+                            <button ion-button full color="light" class="login" round outline (click)="signup()" style="width: 94%;font-size:0.85em">Create Account</button>
+                          </div>
+    
+           
+         
+          </ion-card>
+
+  </div>
+</ion-content>
+
+<ion-footer style="background-color:#c68d2c;">
+  <!--button ion-button full style="background-color:#c68d2c; color:white" (click)="next()">Switch to Mosque</button-->
+  <div align="center"><p style="color:white" (click)="next()"><b>Switch to Mosque</b></p></div>
+</ion-footer>
+

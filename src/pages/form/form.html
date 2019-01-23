@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Request Form</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="header">
+
+<ion-card style="border-radius:12px 12px">
+
+  <ion-item>
+    <ion-input type="text" placeholder="Name" [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+  
+  <ion-item>
+    <ion-input type="text" placeholder="Address" [(ngModel)]="address"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-input type="number" placeholder="Phone Number" [(ngModel)]="phone_number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-input type="text" placeholder="Message" [(ngModel)]="message"></ion-input>
+  </ion-item>
+ 
+  <div align="center">
+    <button ion-button full class="login" style="margin-top: 45px" (click)="signup()">Submit</button>
+  </div>
+
+</ion-card>
+
+</ion-content>

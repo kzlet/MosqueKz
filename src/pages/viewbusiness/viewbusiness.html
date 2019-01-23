@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title><div align="center">{{name}}</div></ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="close()"><p>Close</p></button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="header" padding>
+
+  <ion-card class="adv-map">
+    <div style="position: relative">
+      <img src="{{bg_image}}">
+      <ion-fab right top>
+        <button ion-fab color="secondary">
+          <ion-icon name="pin"></ion-icon>
+        </button>
+      </ion-fab>
+    </div>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='information-circle'></ion-icon>
+      <h2>{{name}}</h2>
+      <p>{{description}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='leaf'></ion-icon>
+      <h2>Location</h2>
+      <img src="imgs/map.jpg">
+    </ion-item>
+    <!-- <ion-item actions>
+      <span ion-text item-start color="secondary" class="item-bold">26 min</span>
+      <span ion-text item-start color="subtle">(8.1 mi)</span>
+      <button ion-button color="secondary" clear item-end icon-start>
+        <ion-icon name='navigate'></ion-icon>
+        Start
+      </button>
+    </ion-item> -->
+  
+  </ion-card>
+  
+</ion-content>

@@ -1,0 +1,69 @@
+
+    .login
+{
+    height: 35px;
+    width: 175px;
+    font-size: 19px;
+   border-radius: 12px 12px;
+   background-color: #c68d2c;
+   color: white;
+   margin-bottom: 30px;
+
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    left: 0;
+    bottom: -5px;
+    background-position: left 0 top -2px;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHBAMAAADzDtBxAAAAD1BMV…h/TXEAAAAaSURBVAjXYxCEAgY4UIICBmMogMsgFLtAAQCNSwXZKOdPxgAAAABJRU5ErkJggg==);
+    background-repeat: repeat-x;
+    content: "";
+}
+.segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+  
+    opacity: 1;
+    
+    border-color: #c68d2c;
+}
+.segment-md .segment-button {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 0;
+    height: 4.2rem;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 4rem;
+    text-transform: uppercase;
+    color: #c68d2c;
+    background-color: transparent;
+    opacity: 0.7;
+    -webkit-transition: 100ms all linear;
+    transition: 100ms all linear;
+    padding: 0 6px;
+}
+.fields
+{
+
+    border-left: 0;
+                    border-right: 0px;
+                    border-top: 0px;
+                    border-width: 1px;
+                    border-bottom-color: black;
+                    padding-top: 13px;
+}
+
+page-mosque-signup{
+    img {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+    }
+}

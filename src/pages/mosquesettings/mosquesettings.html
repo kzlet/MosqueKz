@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-bounce padding class="header">
+    
+  <ion-card style="border-radius:12px 12px; margin-top:6px">
+  <ion-list no-lines>
+        <!-- <ion-item (click)="posts()">
+          <ion-icon name="ios-notifications-outline" style="color:#c68d2c" item-start></ion-icon>
+            Show my Postings
+        </ion-item>
+
+        <ion-item (click)="msg()">
+            <ion-icon name="ios-text-outline" style="color:#c68d2c" item-start></ion-icon>
+             Messages from Administrator
+          </ion-item> -->
+
+          <ion-item (click)="profile()">
+              <ion-icon name="ios-copy-outline" style="color:#c68d2c" item-start></ion-icon>
+                Update Profile
+            </ion-item>
+
+              <ion-item (click)="password()">
+                  <ion-icon name="ios-lock-outline" style="color:#c68d2c" item-start></ion-icon>
+                    Change Password
+                </ion-item>
+
+                <ion-item (click)="dev()">
+                    <ion-icon name="ios-lock-outline" style="color:#c68d2c" item-start></ion-icon>
+                      About Developers
+                  </ion-item>
+
+                  <ion-item (click)="terms()">
+                    <ion-icon name="ios-information-circle-outline" style="color:#c68d2c" item-start></ion-icon>
+                      Terms of Use
+                  </ion-item>
+
+                  <ion-item (click)="privacy()">
+                    <ion-icon name="ios-warning-outline" style="color:#c68d2c" item-start></ion-icon>
+                      Privacy Policy
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-icon name="ios-call-outline" style="color:#c68d2c" item-start></ion-icon>
+                    Contact Us
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-icon ios="ios-share" md="md-share" style="color:#c68d2c" item-start></ion-icon>
+                      Share with Friends
+                  </ion-item>
+
+                <ion-item (click)="logout()">
+                    <ion-icon name="ios-log-out-outline" style="color:#c68d2c" item-start></ion-icon>
+                      Logout
+                  </ion-item>
+      </ion-list>
+    </ion-card>
+</ion-content>
+
+<ion-footer style="background-color: #c68d2c">
+  <div align="center">
+    <p style="color:white">© Halal House</p>
+  </div>
+</ion-footer>

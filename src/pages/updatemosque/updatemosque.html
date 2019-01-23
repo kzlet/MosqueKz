@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="margin-left: 50px;color:#c68d2c">Update Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="header" padding>
+
+  <ion-card style="border-radius:12px 12px">
+         
+    <div align="center" style="padding-top:10px" (click)="presentActionSheet()">
+       <img *ngIf="imageURI === undefined || imageURI === 'undefined'" src="imgs/profile.png" style="width: 27%;"/>
+       <img *ngIf="imageURI != undefined || imageURI != 'undefined'" src="{{imageURI}}" style="width: 27%;"/>
+   </div>
+
+
+     <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+         <ion-item class="item-ios" style="border-radius: 12px 12px;">
+           <ion-input type="text" placeholder="Full Address" [(ngModel)]="address"></ion-input>
+         </ion-item>
+       </div>
+
+         <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+           <ion-item class="item-ios" style="border-radius: 12px 12px;">
+             <ion-input type="number" placeholder="Mobile" [(ngModel)]="mobile"></ion-input>
+           </ion-item>
+         </div>
+
+
+             <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+               <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                 <ion-input type="text" placeholder="Your Name" [(ngModel)]="user_name"></ion-input>
+               </ion-item>
+             </div>
+
+        
+
+
+             <div align="center" style="padding-top:5px">
+               <button ion-button full color="light" class="login" round outline (click)="signup()" style="width: 94%;font-size:1.15em">Update Account</button>  <!--signup-->
+             </div>
+
+
+
+
+  
+   </ion-card>
+
+</ion-content>

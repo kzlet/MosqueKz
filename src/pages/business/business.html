@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title><div align="center"><p style="margin-left:-10px">Halal House Business</p></div></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <ion-card *ngFor="let post of posts" (click)="open_details(post.id, post.name, post.description, post.bg_image)" style="border-radius:12px 12px">
+    <img src="{{post.bg_image}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        <div align="center">{{post.name}}</div>
+      </ion-card-title>
+      <div align="center">{{post.description}}</div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer style="background-color:black">
+  <div align="center" (click)="form()"><p style="color:white">Do you want to Advertise something ? Contact us !</p></div>  <!--Contact us form-->
+</ion-footer>

@@ -1,0 +1,96 @@
+<!-- <ion-content class="header">
+
+    <div *ngIf="profile_picture === null || profile_picture === undefined || profile_picture === 'undefined'" align="center" style="margin-top:6%;">
+
+        <img  src="imgs/userp.png" style="width: 32%;height: 77px;margin-left: 40px;"/>
+        <img align="right" style="width: 12%;margin-top: 7px;padding-right: 7px;" src="imgs/settings3.png" (click)="settings()">
+    
+        <h4 style="color:#00713b;margin-left: -8px;">{{name}}</h4>
+              
+    </div>
+
+    <div  *ngIf="profile_picture != null || profile_picture != undefined || profile_picture != 'undefined'" align="center" style="margin-top:6%;">
+
+      <img src="{{profile_picture}}" style="width: 32%;height: 77px;margin-left: 40px;"/>
+      <img align="right" style="width: 12%;margin-top: 7px;padding-right: 7px;" src="imgs/settings3.png" (click)="settings()">
+  
+      <h4 style="color:#00713b;margin-left: -8px;">{{name}}</h4>
+            
+  </div>
+
+
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+        <img  style="width:50%;margin-left: 24%; margin-top: 7px;" src="imgs/mosque_outline4.png" (click)="openmosque();">
+        <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px;
+        font-size: 2.0rem;">My Mosque</p>
+      </ion-col>
+        <ion-col>
+           
+                <img style="width:50%;margin-left: 24%; margin-top: 7px;" src="imgs/events_outline.png" (click)="events()">
+                <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px; 
+                font-size: 2.1rem;">Events</p>
+             
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+       <ion-grid>
+      <ion-row>
+        <ion-col>
+         
+                <img style="width:50%;margin-left: 24%; margin-top: 7px;" src="imgs/janaza_outline.png" (click)="janaza()">
+                <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px;
+                font-size: 2.0rem;">Janazah</p>
+          
+        </ion-col>
+        <ion-col>
+       
+              <img style="width:50%;margin-left: 24%; margin-top: 7px;" src="imgs/msg_outline.png" (click)="msg()">
+              <p style="color:#c68d2c;text-align: center;margin: 5px 6px 15px;
+              font-size: 2.0rem;">My Messages</p>
+            
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <div align="center">
+     <img src="imgs/black-line.png"/>
+    </div> 
+
+    <div align="center">
+      <h4 style="color:black">Halal House</h4>
+      <p style="color:red" (click)="form()">Click here to advertise your halal business here!</p>
+    </div>
+
+  
+</ion-content> -->
+
+
+<ion-content class="container transparent-header">
+    
+  <div class="new-bg">
+  </div>
+
+  <div style="margin-top:-45%" align="center"><h3 style="color:#c68d2c;font-size:1.4em">{{name}}</h3></div>
+
+
+<div class="card-profile">
+  <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let post of posts, let i = index" col-6>
+         <ion-card class="change-color" (click)="addEvent(i, post.id)" style="border-radius:12px 12px; background-color:white">
+        <div align="center">
+          <img src="{{post.image}}" style="width: 54%;padding-top: 18px;"/>
+          <p style="padding-top: 11px;padding-bottom: 10px;color:#c68d2c"><b>{{post.name}}</b></p>
+        </div>
+        </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</div>
+
+</ion-content>

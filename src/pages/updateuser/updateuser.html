@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="margin-left: 50px;color:#c68d2c">Update Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="header" padding>
+
+  <ion-card style="border-radius:12px 12px">
+       
+    <div align="center" style="margin-top:10px" (click)="presentActionSheet()">
+        <img *ngIf="imageURI === undefined || imageURI === 'undefined'" src="imgs/profile.png" style="width: 27%;"/>
+        <img *ngIf="imageURI != undefined || imageURI != 'undefined'" src="{{imageURI}}" style="width: 27%;"/>
+      </div>
+  
+  
+      <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+          <ion-item class="item-ios" style="border-radius: 12px 12px;">
+            <ion-input type="text" placeholder="Name" [(ngModel)]="name"></ion-input>
+          </ion-item>
+        </div> 
+  
+                <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                <ion-item>
+                  <ion-label>Select City</ion-label>
+                  <ion-select [(ngModel)]="city">
+                    <ion-option value="London">London </ion-option>
+                    <ion-option value="Birmingham">Birmingham </ion-option>
+                    <ion-option value="Manchester">Manchester </ion-option>
+                    <ion-option value="Glasgow">Glasgow</ion-option>
+                    <ion-option value="Newcastle">Newcastle</ion-option>
+                    <ion-option value="Sheffield">Sheffield </ion-option>
+                    <ion-option value="Liverpool">Liverpool</ion-option>
+                    <ion-option value="Leeds">Leeds</ion-option>
+                    <ion-option value="Bristol">Bristol</ion-option>
+                    <ion-option value="Belfast">Belfast</ion-option>
+                    <ion-option value="Nottingham">Nottingham</ion-option>
+                    <ion-option value="York">York</ion-option>
+                    <ion-option value="Cambridge">Cambridge</ion-option>
+                    <ion-option value="Southampton">Southampton</ion-option>
+                    <ion-option value="Portsmouth">Portsmouth</ion-option>
+                    <ion-option value="Leicester">Leicester</ion-option>
+                    <ion-option value="Edinburgh">Edinburgh</ion-option>
+                    <ion-option value="Coventry">Coventry</ion-option>
+                    <ion-option value="Cardiff">Cardiff</ion-option>
+                    <ion-option value="Kingston">Kingston</ion-option>
+                    <ion-option value="Derby">Derby</ion-option>
+                    <ion-option value="Bath">Bath</ion-option>
+                    <ion-option value="Brighton">Brighton</ion-option>
+                    <ion-option value="Norwich">Norwich</ion-option>
+                    <ion-option value="Exeter">Exeter</ion-option>
+                    <ion-option value="Wolverhampton">Wolverhampton</ion-option>
+                    <ion-option value="Plymouth">Plymouth</ion-option>
+                    <ion-option value="Oxford">Oxford</ion-option>
+                    <ion-option value="Belfast">Belfast</ion-option>
+                    <ion-option value="Stoke-on-Trent">Stoke-on-Trent</ion-option>
+                    <ion-option value="Chestor">Chestor</ion-option>
+                    <ion-option value="Peterborough">Peterborough</ion-option>
+                    <ion-option value="Salisbury">Salisbury</ion-option>
+                    <ion-option value="Winchester">Winchester</ion-option>
+                    <ion-option value="Albands">St Albands</ion-option>
+                    <ion-option value="Preston">Preston</ion-option>
+                    <ion-option value="Chichester">Chichester</ion-option>
+                    <ion-option value="Swansea">Swansea</ion-option>
+                    <ion-option value="Canterbury">Canterbury</ion-option>
+                    <ion-option value="Bournemouth">Bournemouth</ion-option>
+                    <ion-option value="Sunderland">Sunderland</ion-option>
+                    <ion-option value="Worcester">Worcester</ion-option>
+                    <ion-option value="Lichfield">Lichfield</ion-option>
+                    <ion-option value="Lincoln">Lincoln</ion-option>
+                    <ion-option value="Carlisle">Carlisle</ion-option>
+                    <ion-option value="Dundee">Dundee</ion-option>
+                    <ion-option value="Middlesbrough">Middlesbrough</ion-option>
+                    <ion-option value="Newport">Newport</ion-option>
+                    <ion-option value="Durham">Durham</ion-option>
+                    <ion-option value="Bradford">Bradford</ion-option>
+                  
+                  </ion-select>
+                </ion-item>
+                </div>
+
+                <div align="center" style="padding-top:5px">
+                  <button ion-button full color="light" class="login" round outline (click)="UpdateProfile()" style="width: 94%;font-size:0.85em">Update Profile</button>
+                </div>
+
+ 
+
+</ion-card>
+
+</ion-content>

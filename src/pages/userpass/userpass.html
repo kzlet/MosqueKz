@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Change Password</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content class="header" padding>
+
+    <ion-card>
+  
+        <ion-item>
+            <ion-label floating>Enter New Password</ion-label>
+            <ion-input type="text" [(ngModel)]="password"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+              <ion-label floating>Confirm Password</ion-label>
+              <ion-input type="text" [(ngModel)]="con_password"></ion-input>
+            </ion-item>
+  
+            <button ion-button color="light" round outline (click)="updatePass()" class="login" style="width: 94%">Update Password</button>
+  
+    </ion-card>
+  
+  </ion-content>

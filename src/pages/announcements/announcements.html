@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+  <ion-title style="margin-left: 60px">
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Events
+    </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+  <ion-content  class="header">
+    <div align="center">
+  <ion-card style="margin-top: 20px;border-radius:12px 12px">
+
+      <div align="center" (click)="presentActionSheet()">
+          <img *ngIf="imageURI" src="{{imageURI}}" style="width: 27%;"/>
+          <p style="color:#c68d2c;margin-top: 3%;">Upload picture</p>
+        </div>
+         
+    <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+      <ion-item class="item-ios" style="border-radius: 12px 12px;">
+        <ion-input type="text" placeholder="Event Title" [(ngModel)]="event_title"></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+        <ion-item class="item-ios" style="border-radius: 12px 12px;">
+          <ion-input type="text" placeholder="Description" [(ngModel)]="event_description"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+      <ion-item>
+        <ion-datetime displayFormat="MMM DD YYYY" placeholder="Event Date" [(ngModel)]="event_date"></ion-datetime>
+      </ion-item>
+      </div>
+
+      <div style="padding-top:8px;padding:5px">
+        <button ion-button full color="light" round outline (click)="signup()" class="login" style="width: 60%">Send</button>
+      </div>
+ 
+  </ion-card>
+</div>
+
+</ion-content>
